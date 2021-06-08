@@ -37,7 +37,8 @@ namespace Curso_Windows_Forms
             else
             {
                 MessageBox.Show("Criando arquivo.");
-                File.Create(nomeArq);
+                Stream arquivo = File.Create(nomeArq);
+                arquivo.Close();
             }            
         }
 
@@ -47,7 +48,7 @@ namespace Curso_Windows_Forms
             if (File.Exists(nomeArq))
             {
                 MessageBox.Show("Arquivo já existe. Excluindo o arquivo.");
-                File.Delete(nomeArq);
+                File.Delete(nomeArq);                
             }
             else
             {
