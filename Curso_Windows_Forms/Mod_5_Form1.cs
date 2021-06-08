@@ -29,8 +29,30 @@ namespace Curso_Windows_Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String nomeArq = "Arquivo.txt";
-            Stream arquivo = File.Create(nomeArq);
+            String nomeArq = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Arquivos\Arquivo.txt";
+            if (File.Exists(nomeArq))
+            {
+                MessageBox.Show("Arquivo já existe.");
+            }
+            else
+            {
+                MessageBox.Show("Criando arquivo.");
+                File.Create(nomeArq);
+            }            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String nomeArq = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Arquivos\Arquivo.txt";
+            if (File.Exists(nomeArq))
+            {
+                MessageBox.Show("Arquivo já existe. Excluindo o arquivo.");
+                File.Delete(nomeArq);
+            }
+            else
+            {
+                MessageBox.Show("Não existe arquivo.");
+            }
         }
     }
 }
