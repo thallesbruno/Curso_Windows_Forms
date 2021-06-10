@@ -55,5 +55,12 @@ namespace Curso_Windows_Forms
                 MessageBox.Show("Não existe arquivo.");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
+            Directory.CreateDirectory(nomePasta);
+
+        }
     }
 }
