@@ -98,5 +98,19 @@ namespace Curso_Windows_Forms
                 MessageBox.Show("Pasta renomeada com sucesso!");
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (!TxtNomeArquivo.Text.Trim().Equals(String.Empty))
+            {
+                String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
+                String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
+                if (File.Exists(nomeArq))
+                {
+                    File.Move(nomeArq, nomePasta + @"\" + TxtNomeArquivo.Text.Trim());
+                }
+                MessageBox.Show("Arquivo renomeado com sucesso!");
+            }
+        }
     }
 }

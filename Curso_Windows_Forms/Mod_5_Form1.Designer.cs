@@ -38,6 +38,9 @@ namespace Curso_Windows_Forms
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtNomePasta = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.TxtNomeArquivo = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +96,8 @@ namespace Curso_Windows_Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TxtNomeArquivo);
+            this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -128,6 +133,23 @@ namespace Curso_Windows_Forms
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(64, 56);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Renomear";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // TxtNomeArquivo
+            // 
+            this.TxtNomeArquivo.Location = new System.Drawing.Point(30, 30);
+            this.TxtNomeArquivo.Name = "TxtNomeArquivo";
+            this.TxtNomeArquivo.Size = new System.Drawing.Size(141, 20);
+            this.TxtNomeArquivo.TabIndex = 2;
+            // 
             // Mod_5_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +165,8 @@ namespace Curso_Windows_Forms
             this.Name = "Mod_5_Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -160,6 +184,8 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TxtNomePasta;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox TxtNomeArquivo;
     }
 }
 
