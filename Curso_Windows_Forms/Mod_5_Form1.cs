@@ -59,7 +59,30 @@ namespace Curso_Windows_Forms
         private void button4_Click(object sender, EventArgs e)
         {
             String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
-            Directory.CreateDirectory(nomePasta);
+            String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
+            if (!Directory.Exists(nomePasta))
+            {
+                MessageBox.Show("Criando a pasta /Exemplos.");
+                Directory.CreateDirectory(nomePasta);
+            }
+            else
+            {
+                MessageBox.Show("A pasta já existe.");
+            }
+
+            if (!File.Exists(nomeArq))
+            {
+                MessageBox.Show("Criando o arquivo PrimeiroExemplo.");
+                File.Create(nomeArq);
+            }
+            else
+            {
+                MessageBox.Show("O arquivo já existe.");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
 
         }
     }
