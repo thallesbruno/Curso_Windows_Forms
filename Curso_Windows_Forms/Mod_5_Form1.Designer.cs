@@ -36,8 +36,8 @@ namespace Curso_Windows_Forms
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TxtNomePasta = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@ namespace Curso_Windows_Forms
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.TxtNomePasta);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Location = new System.Drawing.Point(12, 118);
             this.groupBox2.Name = "groupBox2";
@@ -111,21 +111,22 @@ namespace Curso_Windows_Forms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Renomear diretórios";
             // 
+            // TxtNomePasta
+            // 
+            this.TxtNomePasta.Location = new System.Drawing.Point(30, 27);
+            this.TxtNomePasta.Name = "TxtNomePasta";
+            this.TxtNomePasta.Size = new System.Drawing.Size(141, 20);
+            this.TxtNomePasta.TabIndex = 1;
+            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(64, 53);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 0;
-            this.button6.Text = "button6";
+            this.button6.Text = "Renomear";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(30, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 1;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Mod_5_Form1
             // 
@@ -157,7 +158,7 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtNomePasta;
         private System.Windows.Forms.Button button6;
     }
 }

@@ -83,7 +83,20 @@ namespace Curso_Windows_Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Funcionalidade a ser desenvolvida.");
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (!TxtNomePasta.Text.Trim().Equals(String.Empty))
+            {
+                String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
+                if (Directory.Exists(nomePasta))
+                {
+                    Directory.Move(nomePasta, TxtNomePasta.Text.Trim());
+                }
+                MessageBox.Show("Pasta renomeada com sucesso!");
+            }
         }
     }
 }
