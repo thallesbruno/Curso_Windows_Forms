@@ -117,5 +117,21 @@ namespace Curso_Windows_Forms
                 
             }
         }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
+            String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
+            if (File.Exists(nomeArq))
+            {
+                FileInfo file = new FileInfo(nomeArq);
+                textBox1.Text = String.Format(
+                    "{0}{1}{2}{3}{4}",
+                    file.Name,
+                    Environment.NewLine,
+                    file.Extension,
+                    Environment.NewLine,
+                    file.Directory);
+            }
+        }
     }
 }

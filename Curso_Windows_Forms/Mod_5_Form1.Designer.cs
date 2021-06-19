@@ -35,18 +35,20 @@ namespace Curso_Windows_Forms
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtNomeArquivo = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtNomePasta = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.TxtNomeArquivo = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(241, 12);
+            this.button1.Location = new System.Drawing.Point(319, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 0;
@@ -56,7 +58,7 @@ namespace Curso_Windows_Forms
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(266, 63);
+            this.button2.Location = new System.Drawing.Point(344, 63);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -66,7 +68,7 @@ namespace Curso_Windows_Forms
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(266, 92);
+            this.button3.Location = new System.Drawing.Point(344, 92);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -76,7 +78,7 @@ namespace Curso_Windows_Forms
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(241, 141);
+            this.button4.Location = new System.Drawing.Point(319, 141);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 23);
             this.button4.TabIndex = 3;
@@ -86,7 +88,7 @@ namespace Curso_Windows_Forms
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(241, 171);
+            this.button5.Location = new System.Drawing.Point(319, 171);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 23);
             this.button5.TabIndex = 4;
@@ -98,18 +100,35 @@ namespace Curso_Windows_Forms
             // 
             this.groupBox1.Controls.Add(this.TxtNomeArquivo);
             this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(51, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Renomear arquivos";
             // 
+            // TxtNomeArquivo
+            // 
+            this.TxtNomeArquivo.Location = new System.Drawing.Point(30, 30);
+            this.TxtNomeArquivo.Name = "TxtNomeArquivo";
+            this.TxtNomeArquivo.Size = new System.Drawing.Size(141, 20);
+            this.TxtNomeArquivo.TabIndex = 2;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(64, 56);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Renomear";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.TxtNomePasta);
             this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Location = new System.Drawing.Point(12, 118);
+            this.groupBox2.Location = new System.Drawing.Point(51, 118);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
             this.groupBox2.TabIndex = 6;
@@ -133,28 +152,31 @@ namespace Curso_Windows_Forms
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // textBox1
             // 
-            this.button7.Location = new System.Drawing.Point(64, 56);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Renomear";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.textBox1.Location = new System.Drawing.Point(12, 224);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 64);
+            this.textBox1.TabIndex = 3;
             // 
-            // TxtNomeArquivo
+            // button8
             // 
-            this.TxtNomeArquivo.Location = new System.Drawing.Point(30, 30);
-            this.TxtNomeArquivo.Name = "TxtNomeArquivo";
-            this.TxtNomeArquivo.Size = new System.Drawing.Size(141, 20);
-            this.TxtNomeArquivo.TabIndex = 2;
+            this.button8.Location = new System.Drawing.Point(344, 244);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Ver nome";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Mod_5_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 300);
+            this.ClientSize = new System.Drawing.Size(451, 300);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
@@ -170,6 +192,7 @@ namespace Curso_Windows_Forms
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -186,6 +209,8 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox TxtNomeArquivo;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button8;
     }
 }
 
