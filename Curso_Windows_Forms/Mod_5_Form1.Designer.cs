@@ -90,7 +90,7 @@ namespace Curso_Windows_Forms
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(319, 171);
+            this.button5.Location = new System.Drawing.Point(191, 396);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 23);
             this.button5.TabIndex = 4;

@@ -79,11 +79,17 @@ namespace Curso_Windows_Forms
             {
                 MessageBox.Show("O arquivo já existe.");
             }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcionalidade a ser desenvolvida.");
+            String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
+            if (Directory.Exists(nomePasta))
+            {
+                Directory.Delete(nomePasta, true);
+                MessageBox.Show("Pasta e arquivo excluídos.");
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
