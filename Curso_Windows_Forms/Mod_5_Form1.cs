@@ -108,8 +108,13 @@ namespace Curso_Windows_Forms
                 if (File.Exists(nomeArq))
                 {
                     File.Move(nomeArq, nomePasta + @"\" + TxtNomeArquivo.Text.Trim());
+                    MessageBox.Show("Arquivo renomeado com sucesso!");
                 }
-                MessageBox.Show("Arquivo renomeado com sucesso!");
+                else
+                {
+                    MessageBox.Show("Não foi possível renomear o arquivo.");
+                }
+                
             }
         }
     }
