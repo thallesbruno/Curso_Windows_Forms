@@ -42,6 +42,8 @@ namespace Curso_Windows_Forms
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -162,19 +164,39 @@ namespace Curso_Windows_Forms
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(344, 244);
+            this.button8.Location = new System.Drawing.Point(324, 246);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(115, 23);
             this.button8.TabIndex = 2;
-            this.button8.Text = "Ver nome";
+            this.button8.Text = "Ver nome do arquivo";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 294);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(306, 64);
+            this.textBox2.TabIndex = 8;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(324, 316);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(115, 23);
+            this.button9.TabIndex = 7;
+            this.button9.Text = "Ver nome da pasta";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Mod_5_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 300);
+            this.ClientSize = new System.Drawing.Size(451, 451);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.groupBox2);
@@ -211,6 +233,8 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.TextBox TxtNomeArquivo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button9;
     }
 }
 

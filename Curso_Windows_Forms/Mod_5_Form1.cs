@@ -133,5 +133,21 @@ namespace Curso_Windows_Forms
                     file.Directory);
             }
         }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (TxtNomePasta.Text.Trim().Equals(String.Empty))
+            {
+                String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
+                if (Directory.Exists(nomePasta))
+                {
+                    DirectoryInfo directory = new DirectoryInfo(nomePasta);
+                    textBox2.Text = String.Format(
+                        "{0}{1}{2}",
+                        directory.Name,
+                        Environment.NewLine,
+                        directory.Root);
+                }
+            }
+        }
     }
 }
