@@ -87,8 +87,20 @@ namespace Curso_Windows_Forms
             String nomePasta = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Exemplos";
             if (Directory.Exists(nomePasta))
             {
-                Directory.Delete(nomePasta, true);
-                MessageBox.Show("Pasta e arquivo excluídos.");
+                /*Primeira forma
+                 * Directory.Delete(nomePasta, true);
+                 *MessageBox.Show("Pasta e arquivo excluídos.");
+                 */
+
+                /*Segunda forma
+                 */
+                var lista = Directory.GetFiles(nomePasta);
+                foreach (var item in lista)
+                {
+                    textBox3.Text = textBox3.Text + item + Environment.NewLine;
+                    File.Delete(item);
+                }
+                Directory.Delete(nomePasta);
             }
         }
 

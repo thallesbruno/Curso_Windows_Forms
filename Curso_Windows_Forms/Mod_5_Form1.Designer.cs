@@ -44,6 +44,7 @@ namespace Curso_Windows_Forms
             this.button8 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +91,7 @@ namespace Curso_Windows_Forms
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(191, 396);
+            this.button5.Location = new System.Drawing.Point(173, 380);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 23);
             this.button5.TabIndex = 4;
@@ -190,11 +191,20 @@ namespace Curso_Windows_Forms
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 409);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(444, 111);
+            this.textBox3.TabIndex = 9;
+            // 
             // Mod_5_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 451);
+            this.ClientSize = new System.Drawing.Size(466, 527);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.textBox1);
@@ -208,7 +218,7 @@ namespace Curso_Windows_Forms
             this.Controls.Add(this.button1);
             this.Name = "Mod_5_Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Manipulação de arquivos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -235,6 +245,7 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
