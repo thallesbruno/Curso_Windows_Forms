@@ -31,6 +31,8 @@ namespace Curso_Windows_Forms
         {
             this.btnLeitura = new System.Windows.Forms.Button();
             this.lsbConteudo = new System.Windows.Forms.ListBox();
+            this.btnLeitura2 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLeitura
@@ -39,7 +41,7 @@ namespace Curso_Windows_Forms
             this.btnLeitura.Name = "btnLeitura";
             this.btnLeitura.Size = new System.Drawing.Size(124, 33);
             this.btnLeitura.TabIndex = 0;
-            this.btnLeitura.Text = "Realizar leitura";
+            this.btnLeitura.Text = "1 - Realizar leitura";
             this.btnLeitura.UseVisualStyleBackColor = true;
             this.btnLeitura.Click += new System.EventHandler(this.btnLeitura_Click);
             // 
@@ -51,11 +53,33 @@ namespace Curso_Windows_Forms
             this.lsbConteudo.Size = new System.Drawing.Size(501, 160);
             this.lsbConteudo.TabIndex = 1;
             // 
+            // btnLeitura2
+            // 
+            this.btnLeitura2.Location = new System.Drawing.Point(142, 12);
+            this.btnLeitura2.Name = "btnLeitura2";
+            this.btnLeitura2.Size = new System.Drawing.Size(124, 33);
+            this.btnLeitura2.TabIndex = 2;
+            this.btnLeitura2.Text = "2 - Realizar leitura";
+            this.btnLeitura2.UseVisualStyleBackColor = true;
+            this.btnLeitura2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(433, 12);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 32);
+            this.btnLimpar.TabIndex = 3;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // FrmLeituraArquivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(520, 221);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnLeitura2);
             this.Controls.Add(this.lsbConteudo);
             this.Controls.Add(this.btnLeitura);
             this.Name = "FrmLeituraArquivo";
@@ -68,5 +92,7 @@ namespace Curso_Windows_Forms
 
         private System.Windows.Forms.Button btnLeitura;
         private System.Windows.Forms.ListBox lsbConteudo;
+        private System.Windows.Forms.Button btnLeitura2;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

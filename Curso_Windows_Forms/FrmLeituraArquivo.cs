@@ -24,12 +24,31 @@ namespace Curso_Windows_Forms
             if (File.Exists(nomeArq))
             {
                 String[] array = File.ReadAllLines(nomeArq);
-                lsbConteudo.Items.Clear();
                 foreach (var item in array)
                 {
                     lsbConteudo.Items.Add(item);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String nomeArq = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Arquivos\Arquivo.txt";
+            if (File.Exists(nomeArq))
+            {
+                StreamReader reader = new StreamReader(nomeArq);
+                String linha;
+                while ((linha = reader.ReadLine()) != null)
+                {
+                    lsbConteudo.Items.Add(linha);
+                }
+                reader.Close();
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            lsbConteudo.Items.Clear();
         }
     }
 }
