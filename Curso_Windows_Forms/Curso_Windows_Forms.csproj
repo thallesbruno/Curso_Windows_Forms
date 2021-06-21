@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLeituraArquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLeituraArquivo.Designer.cs">
+      <DependentUpon>FrmLeituraArquivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mod_5_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmLeituraArquivo.resx">
+      <DependentUpon>FrmLeituraArquivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mod_5_Form1.resx">
       <DependentUpon>Mod_5_Form1.cs</DependentUpon>
     </EmbeddedResource>
