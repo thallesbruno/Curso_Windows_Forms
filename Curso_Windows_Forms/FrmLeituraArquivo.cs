@@ -37,9 +37,27 @@ namespace Curso_Windows_Forms
             if (File.Exists(nomeArq))
             {
                 StreamReader reader = new StreamReader(nomeArq);
-                String linha;
-                while ((linha = reader.ReadLine()) != null)
+                //String linha;
+                String linha = reader.ReadLine();
+                //while ((linha = reader.ReadLine()) != null)
+                while(linha != null)
                 {
+                    lsbConteudo.Items.Add(linha);
+                    linha = reader.ReadLine();
+                }
+                reader.Close();
+            }
+        }
+
+        private void btnLeitura3_Click(object sender, EventArgs e)
+        {
+            String nomeArq = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Arquivos\Arquivo.txt";
+            if (File.Exists(nomeArq))
+            {
+                StreamReader reader = File.OpenText(nomeArq);
+                while (!reader.EndOfStream)
+                {
+                    String linha = reader.ReadLine();
                     lsbConteudo.Items.Add(linha);
                 }
                 reader.Close();
