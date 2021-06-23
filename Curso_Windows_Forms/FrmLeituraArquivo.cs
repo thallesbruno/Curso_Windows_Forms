@@ -65,13 +65,23 @@ namespace Curso_Windows_Forms
             String nomeArq = @"D:\Dev\visual-studio\Curso_Windows_Forms\Curso_Windows_Forms\bin\Debug\Arquivos\Arquivo.txt";
             if (File.Exists(nomeArq))
             {
+                /*Primeira forma
                 StreamReader reader = File.OpenText(nomeArq);
                 while (!reader.EndOfStream)
                 {
                     String linha = reader.ReadLine();
                     lsbConteudo.Items.Add(linha);
                 }
-                reader.Close();
+                reader.Close();*/
+
+                using (StreamReader reader = File.OpenText(nomeArq))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        String linha = reader.ReadLine();
+                        lsbConteudo.Items.Add(linha);
+                    }
+                }
             }
         }
 
