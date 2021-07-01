@@ -89,5 +89,16 @@ namespace Curso_Windows_Forms
         {
             lsbConteudo.Items.Clear();
         }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Selecionar arquivo";
+            openFile.CheckFileExists = true;
+            openFile.DefaultExt = "txt";
+            openFile.Filter = "Arquivo de texto (*.txt)|*.txt";
+
+            openFile.ShowDialog();
+        }
     }
 }

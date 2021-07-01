@@ -34,6 +34,7 @@ namespace Curso_Windows_Forms
             this.btnLeitura2 = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnLeitura3 = new System.Windows.Forms.Button();
+            this.btnProcurar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLeitura
@@ -51,7 +52,7 @@ namespace Curso_Windows_Forms
             this.lsbConteudo.FormattingEnabled = true;
             this.lsbConteudo.Location = new System.Drawing.Point(12, 51);
             this.lsbConteudo.Name = "lsbConteudo";
-            this.lsbConteudo.Size = new System.Drawing.Size(501, 160);
+            this.lsbConteudo.Size = new System.Drawing.Size(570, 160);
             this.lsbConteudo.TabIndex = 1;
             // 
             // btnLeitura2
@@ -66,7 +67,7 @@ namespace Curso_Windows_Forms
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(433, 12);
+            this.btnLimpar.Location = new System.Drawing.Point(507, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 32);
             this.btnLimpar.TabIndex = 3;
@@ -84,11 +85,22 @@ namespace Curso_Windows_Forms
             this.btnLeitura3.UseVisualStyleBackColor = true;
             this.btnLeitura3.Click += new System.EventHandler(this.btnLeitura3_Click);
             // 
+            // btnProcurar
+            // 
+            this.btnProcurar.Location = new System.Drawing.Point(335, 11);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(101, 33);
+            this.btnProcurar.TabIndex = 5;
+            this.btnProcurar.Text = "Procurar arquivo";
+            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
+            // 
             // FrmLeituraArquivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 221);
+            this.ClientSize = new System.Drawing.Size(589, 221);
+            this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.btnLeitura3);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnLeitura2);
@@ -107,5 +119,6 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.Button btnLeitura2;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnLeitura3;
+        private System.Windows.Forms.Button btnProcurar;
     }
 }
