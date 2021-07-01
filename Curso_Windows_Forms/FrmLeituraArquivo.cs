@@ -92,13 +92,26 @@ namespace Curso_Windows_Forms
 
         private void btnProcurar_Click(object sender, EventArgs e)
         {
+            String nomeArq;
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Title = "Selecionar arquivo";
+            openFile.Multiselect = false;
             openFile.CheckFileExists = true;
             openFile.DefaultExt = "txt";
             openFile.Filter = "Arquivo de texto (*.txt)|*.txt";
-
-            openFile.ShowDialog();
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                nomeArq = openFile.FileName;
+                using (StreamReader reader = new StreamReader(nomeArq))
+                {
+                    String linha;
+                    lsbConteudo.Items.Clear();
+                    while ((linha = reader.ReadLine()) != null)
+                    {
+                        lsbConteudo.Items.Add(linha);
+                    }
+                }
+            }
         }
     }
 }
