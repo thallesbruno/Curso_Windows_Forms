@@ -35,6 +35,7 @@ namespace Curso_Windows_Forms
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnLeitura3 = new System.Windows.Forms.Button();
             this.btnProcurar = new System.Windows.Forms.Button();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // btnLeitura
@@ -95,6 +96,12 @@ namespace Curso_Windows_Forms
             this.btnProcurar.UseVisualStyleBackColor = true;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
+            // openFile
+            // 
+            this.openFile.DefaultExt = "txt";
+            this.openFile.Filter = "Arquivo de texto (*.txt)|*.txt";
+            this.openFile.Title = "Selecionar arquivo";
+            // 
             // FrmLeituraArquivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +114,7 @@ namespace Curso_Windows_Forms
             this.Controls.Add(this.lsbConteudo);
             this.Controls.Add(this.btnLeitura);
             this.Name = "FrmLeituraArquivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leitura de Arquivo";
             this.ResumeLayout(false);
 
@@ -120,5 +128,6 @@ namespace Curso_Windows_Forms
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnLeitura3;
         private System.Windows.Forms.Button btnProcurar;
+        private System.Windows.Forms.OpenFileDialog openFile;
     }
 }
