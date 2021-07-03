@@ -16,7 +16,7 @@ namespace Curso_Windows_Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLeituraArquivo());
+            Application.Run(new FrmGravacao());
         }
     }
 }
