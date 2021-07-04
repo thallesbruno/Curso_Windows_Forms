@@ -173,6 +173,7 @@ namespace ProjetoModuloSeis
             this.btnSoma.TabIndex = 14;
             this.btnSoma.Text = "+";
             this.btnSoma.UseVisualStyleBackColor = true;
+            this.btnSoma.Click += new System.EventHandler(this.btnSoma_Click);
             // 
             // btnSubtracao
             // 
@@ -182,6 +183,7 @@ namespace ProjetoModuloSeis
             this.btnSubtracao.TabIndex = 13;
             this.btnSubtracao.Text = "-";
             this.btnSubtracao.UseVisualStyleBackColor = true;
+            this.btnSubtracao.Click += new System.EventHandler(this.btnSubtracao_Click);
             // 
             // btnMultiplicacao
             // 
@@ -191,6 +193,7 @@ namespace ProjetoModuloSeis
             this.btnMultiplicacao.TabIndex = 12;
             this.btnMultiplicacao.Text = "*";
             this.btnMultiplicacao.UseVisualStyleBackColor = true;
+            this.btnMultiplicacao.Click += new System.EventHandler(this.btnMultiplicacao_Click);
             // 
             // btnDivisao
             // 
@@ -210,6 +213,7 @@ namespace ProjetoModuloSeis
             this.btnIgual.TabIndex = 18;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // btnUmPorX
             // 

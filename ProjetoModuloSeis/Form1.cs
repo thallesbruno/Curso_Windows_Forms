@@ -29,7 +29,12 @@ namespace ProjetoModuloSeis
             operacao = String.Empty;
         }
 
-        private void AdicionaCaractereNUmerico(String caractere)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void AdicionarCaractereNumerico(String caractere)
         {
             if (txtDisplay.Text.Trim().Equals("0"))
             {
@@ -47,6 +52,7 @@ namespace ProjetoModuloSeis
             {
                 numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
                 operacao = caractere;
+                txtDisplay.Clear();
             }
         }
 
@@ -60,57 +66,75 @@ namespace ProjetoModuloSeis
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("1");
+            AdicionarCaractereNumerico("1");
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("2");
+            AdicionarCaractereNumerico("2");
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("3");
+            AdicionarCaractereNumerico("3");
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("4");
+            AdicionarCaractereNumerico("4");
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("5");
+            AdicionarCaractereNumerico("5");
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("6");
+            AdicionarCaractereNumerico("6");
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("7");
+            AdicionarCaractereNumerico("7");
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("8");
+            AdicionarCaractereNumerico("8");
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            AdicionaCaractereNUmerico("9");
+            AdicionarCaractereNumerico("9");
         }
 
         private void btnDivisao_Click(object sender, EventArgs e)
         {
-            
+            AdicionarCaractereOperacao("/");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnMultiplicacao_Click(object sender, EventArgs e)
         {
-            LimparCampos();
+            AdicionarCaractereOperacao("*");
+        }
+
+        private void btnSubtracao_Click(object sender, EventArgs e)
+        {
+            AdicionarCaractereOperacao("-");
+        }
+
+        private void btnSoma_Click(object sender, EventArgs e)
+        {
+            AdicionarCaractereOperacao("+");
+        }
+
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+            if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            {
+                numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
+            }
         }
     }
 }
