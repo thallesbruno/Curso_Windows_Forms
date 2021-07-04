@@ -200,6 +200,7 @@ namespace ProjetoModuloSeis
             this.btnDivisao.TabIndex = 11;
             this.btnDivisao.Text = "/";
             this.btnDivisao.UseVisualStyleBackColor = true;
+            this.btnDivisao.Click += new System.EventHandler(this.btnDivisao_Click);
             // 
             // btnIgual
             // 
@@ -326,6 +327,7 @@ namespace ProjetoModuloSeis
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

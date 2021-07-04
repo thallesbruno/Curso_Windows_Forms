@@ -17,6 +17,18 @@ namespace ProjetoModuloSeis
             InitializeComponent();
         }
 
+        private Double numero1;
+        private Double numero2;
+        private String operacao;
+
+        private void LimparCampos()
+        {
+            txtDisplay.Clear();
+            numero1 = 0;
+            numero2 = 0;
+            operacao = String.Empty;
+        }
+
         private void AdicionaCaractereNUmerico(String caractere)
         {
             if (txtDisplay.Text.Trim().Equals("0"))
@@ -26,6 +38,15 @@ namespace ProjetoModuloSeis
             else
             {
                 txtDisplay.Text = txtDisplay.Text + caractere;
+            }
+        }
+
+        private void AdicionarCaractereOperacao(String caractere)
+        {
+            if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            {
+                numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
+                operacao = caractere;
             }
         }
 
@@ -80,6 +101,16 @@ namespace ProjetoModuloSeis
         private void btn9_Click(object sender, EventArgs e)
         {
             AdicionaCaractereNUmerico("9");
+        }
+
+        private void btnDivisao_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }
