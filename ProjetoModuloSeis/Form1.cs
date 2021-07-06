@@ -20,6 +20,7 @@ namespace ProjetoModuloSeis
         private Double numero1;
         private Double numero2;
         private String operacao;
+        private double resultado;
 
         private bool PressionouIgual;
 
@@ -33,6 +34,7 @@ namespace ProjetoModuloSeis
             numero1 = 0;
             numero2 = 0;
             operacao = String.Empty;
+            resultado = 0;
             PressionouIgual = false;
         }        
 
@@ -57,7 +59,14 @@ namespace ProjetoModuloSeis
         {
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
-                numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
+                if (txtDisplay.Text.Trim().Contains("."))
+                {
+                    numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                }
+                else
+                {
+                    numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
+                }
                 operacao = caractere;
                 txtDisplay.Clear();
             }
@@ -73,18 +82,19 @@ namespace ProjetoModuloSeis
                         MessageBox.Show("Divisão por zero!");
                         break;
                     }
-                    txtDisplay.Text = (numero1 / numero2).ToString();
+                    resultado = numero1 / numero2;
                     break;
                 case "*":
-                    txtDisplay.Text = (numero1 * numero2).ToString();
+                    resultado = numero1 * numero2;
                     break;
                 case "-":
-                    txtDisplay.Text = (numero1 - numero2).ToString();
+                    resultado = numero1 - numero2;
                     break;
                 case "+":
-                    txtDisplay.Text = (numero1 + numero2).ToString();
+                    resultado = numero1 + numero2;
                     break;
             }
+            txtDisplay.Text = resultado.ToString().Replace(",", ".");
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -164,10 +174,28 @@ namespace ProjetoModuloSeis
         {
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
-                numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
+                if (txtDisplay.Text.Trim().Contains("."))
+                {
+                    numero2 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                }
+                else
+                {
+                    numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
+                }
                 Calcular();
                 PressionouIgual = true;
             }
+        }
+
+        private void btnPonto_Click(object sender, EventArgs e)
+        {
+            if (PressionouIgual)
+            {
+
+            }
+            if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
+            if (txtDisplay.Text.Trim().Contains(".")) return;
+            txtDisplay.Text += ".";
         }
     }
 }
