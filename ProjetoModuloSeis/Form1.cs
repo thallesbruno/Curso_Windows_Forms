@@ -21,21 +21,28 @@ namespace ProjetoModuloSeis
         private Double numero2;
         private String operacao;
 
+        private bool PressionouIgual;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
         private void LimparCampos()
         {
             txtDisplay.Clear();
             numero1 = 0;
             numero2 = 0;
             operacao = String.Empty;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LimparCampos();
-        }
+            PressionouIgual = false;
+        }        
 
         private void AdicionarCaractereNumerico(String caractere)
         {
+            if (PressionouIgual == true)
+            {
+                txtDisplay.Clear();
+                PressionouIgual = false;
+            }
             if (txtDisplay.Text.Trim().Equals("0"))
             {
                 txtDisplay.Text = caractere;
@@ -159,6 +166,7 @@ namespace ProjetoModuloSeis
             {
                 numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
                 Calcular();
+                PressionouIgual = true;
             }
         }
     }
