@@ -172,6 +172,12 @@ namespace ProjetoModuloSeis
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            if (PressionouIgual)
+            {
+                txtDisplay.Clear();
+                PressionouIgual = false;
+                return;
+            }
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 if (txtDisplay.Text.Trim().Contains("."))
@@ -191,7 +197,9 @@ namespace ProjetoModuloSeis
         {
             if (PressionouIgual)
             {
-
+                txtDisplay.Text = "0.";
+                PressionouIgual = false;
+                return;
             }
             if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
             if (txtDisplay.Text.Trim().Contains(".")) return;
