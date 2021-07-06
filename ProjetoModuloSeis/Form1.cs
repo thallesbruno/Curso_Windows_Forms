@@ -56,6 +56,30 @@ namespace ProjetoModuloSeis
             }
         }
 
+        private void Calcular()
+        {
+            switch (operacao)
+            {
+                case "/":
+                    if (numero2 == 0)
+                    {
+                        MessageBox.Show("Divisão por zero!");
+                        break;
+                    }
+                    txtDisplay.Text = (numero1 / numero2).ToString();
+                    break;
+                case "*":
+                    txtDisplay.Text = (numero1 * numero2).ToString();
+                    break;
+                case "-":
+                    txtDisplay.Text = (numero1 - numero2).ToString();
+                    break;
+                case "+":
+                    txtDisplay.Text = (numero1 + numero2).ToString();
+                    break;
+            }
+        }
+
         private void btn0_Click(object sender, EventArgs e)
         {
             if (!txtDisplay.Text.Trim().Equals("0"))
@@ -134,6 +158,7 @@ namespace ProjetoModuloSeis
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
+                Calcular();
             }
         }
     }
