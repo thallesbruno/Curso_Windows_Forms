@@ -278,6 +278,7 @@ namespace ProjetoModuloSeis
             this.btnCE.TabIndex = 20;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btnC
             // 
@@ -287,6 +288,7 @@ namespace ProjetoModuloSeis
             this.btnC.TabIndex = 19;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // txtDisplay
             // 

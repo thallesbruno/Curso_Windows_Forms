@@ -205,5 +205,15 @@ namespace ProjetoModuloSeis
             if (txtDisplay.Text.Trim().Contains(".")) return;
             txtDisplay.Text += ".";
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
