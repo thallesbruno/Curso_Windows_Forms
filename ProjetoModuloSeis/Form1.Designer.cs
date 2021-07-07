@@ -225,6 +225,7 @@ namespace ProjetoModuloSeis
             this.btnUmPorX.TabIndex = 17;
             this.btnUmPorX.Text = "1/x";
             this.btnUmPorX.UseVisualStyleBackColor = true;
+            this.btnUmPorX.Click += new System.EventHandler(this.btnUmPorX_Click);
             // 
             // btnRaizQuadrada
             // 
@@ -234,6 +235,7 @@ namespace ProjetoModuloSeis
             this.btnRaizQuadrada.TabIndex = 16;
             this.btnRaizQuadrada.Text = "sqrt";
             this.btnRaizQuadrada.UseVisualStyleBackColor = true;
+            this.btnRaizQuadrada.Click += new System.EventHandler(this.btnRaizQuadrada_Click);
             // 
             // btnPotenciacao
             // 
