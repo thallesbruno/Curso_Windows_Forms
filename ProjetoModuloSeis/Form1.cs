@@ -70,6 +70,10 @@ namespace ProjetoModuloSeis
                 operacao = caractere;
                 txtDisplay.Clear();
             }
+            else
+            {
+                MessageBox.Show("Você deve inserir um valor!");
+            }
         }
 
         private void Calcular()
@@ -221,6 +225,19 @@ namespace ProjetoModuloSeis
             {
                 txtDisplay.Clear();
             }
+        }
+
+        private void btnMaisMenos_Click(object sender, EventArgs e)
+        {
+            if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            {
+                txtDisplay.Text = (Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ",")) * (-1)).ToString().Replace(",", ".");
+            }
+        }
+
+        private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
