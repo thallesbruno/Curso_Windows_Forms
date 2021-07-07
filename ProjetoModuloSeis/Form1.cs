@@ -213,7 +213,14 @@ namespace ProjetoModuloSeis
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-
+            if (operacao.Equals(String.Empty) || PressionouIgual)
+            {
+                LimparCampos();
+            }
+            else
+            {
+                txtDisplay.Clear();
+            }
         }
     }
 }
