@@ -237,7 +237,13 @@ namespace ProjetoModuloSeis
 
         private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)
         {
-
+            int tamanho = txtDisplay.Text.Trim().Length;
+            String texto = txtDisplay.Text.Trim();
+            txtDisplay.Clear();
+            for (int i = 0; i < tamanho - 1; i++)
+            {
+                txtDisplay.Text = txtDisplay.Text + texto[i];
+            }
         }
     }
 }
