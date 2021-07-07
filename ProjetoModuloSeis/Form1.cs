@@ -97,8 +97,16 @@ namespace ProjetoModuloSeis
                 case "+":
                     resultado = numero1 + numero2;
                     break;
+                case "^":
+                    resultado = CalcularPotencia();
+                    break;
             }
             txtDisplay.Text = resultado.ToString().Replace(",", ".");
+        }
+
+        public Double CalcularPotencia()
+        {
+            return Math.Pow(numero1, numero2); 
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -244,6 +252,23 @@ namespace ProjetoModuloSeis
             {
                 txtDisplay.Text = txtDisplay.Text + texto[i];
             }
+        }
+
+        private void btnElevaQuadrado_Click(object sender, EventArgs e)
+        {
+            if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            {
+                numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                numero2 = 2;
+                var result = CalcularPotencia();
+                txtDisplay.Text = result.ToString().Replace(",", ".");
+                PressionouIgual = true;
+            }
+        }
+
+        private void btnPotenciacao_Click(object sender, EventArgs e)
+        {
+            AdicionarCaractereOperacao("^");
         }
     }
 }

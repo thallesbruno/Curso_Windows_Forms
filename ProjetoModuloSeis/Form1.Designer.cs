@@ -243,6 +243,7 @@ namespace ProjetoModuloSeis
             this.btnPotenciacao.TabIndex = 15;
             this.btnPotenciacao.Text = "^";
             this.btnPotenciacao.UseVisualStyleBackColor = true;
+            this.btnPotenciacao.Click += new System.EventHandler(this.btnPotenciacao_Click);
             // 
             // btnElevaQuadrado
             // 
@@ -252,6 +253,7 @@ namespace ProjetoModuloSeis
             this.btnElevaQuadrado.TabIndex = 23;
             this.btnElevaQuadrado.Text = "^2";
             this.btnElevaQuadrado.UseVisualStyleBackColor = true;
+            this.btnElevaQuadrado.Click += new System.EventHandler(this.btnElevaQuadrado_Click);
             // 
             // btnRemoveUltimoDigito
             // 
