@@ -1,17 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoModuloSete
 {
     public class Carro
     {
-        String cor;
-        String modelo;
-        Double velocidadeMaxima;
-        int qtdRodas;
-        int qtdPortas;
+        public String cor;
+        public String modelo;
+        public Double velocidadeMaxima;
+        public int qtdRodas;
+        public int qtdPortas;
+
+       public string Ligar()
+        {
+            return "Carro ligado!";
+        }
+
+        public string Acelerar()
+        {
+            return "Carro acelerou!";
+        }
     }
 }

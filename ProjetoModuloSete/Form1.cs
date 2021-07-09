@@ -12,9 +12,32 @@ namespace ProjetoModuloSete
 {
     public partial class Form1 : Form
     {
+        private Carro meuCarro = new Carro();
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            meuCarro = new Carro();
+            meuCarro.cor = "Prata";
+            meuCarro.modelo = "Honda City";
+            meuCarro.qtdPortas = 4;
+            meuCarro.qtdRodas = 4;
+            meuCarro.velocidadeMaxima = 220;
+        }
+
+        private void btnLigar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(meuCarro.Ligar());
+        }
+
+        private void btnAcelerar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(meuCarro.Acelerar());
+        }
+
     }
 }
