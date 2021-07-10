@@ -22,11 +22,11 @@ namespace ProjetoModuloSete
         private void btnCriar_Click(object sender, EventArgs e)
         {
             meuCarro = new Carro();
-            meuCarro.cor = "Prata";
-            meuCarro.modelo = "Honda City";
-            meuCarro.qtdPortas = 4;
-            meuCarro.qtdRodas = 4;
-            meuCarro.velocidadeMaxima = 220;
+            meuCarro.setCor("Prata");
+            meuCarro.setModelo("Honda City");
+            meuCarro.setQtdPortas(4);
+            meuCarro.setQtdRodas(4);
+            meuCarro.setVelocidadeMaxima(220);
         }
 
         private void btnLigar_Click(object sender, EventArgs e)
