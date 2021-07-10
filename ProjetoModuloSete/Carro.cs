@@ -4,13 +4,22 @@ namespace ProjetoModuloSete
 {
     public class Carro
     {
+        public Carro(String cor, String modelo, Double velocidadeMaxima, int qtdRodas, int qtdPortas)
+        {
+            setCor(cor);
+            setModelo(modelo);
+            setVelocidadeMaxima(velocidadeMaxima);
+            setQtdPortas(qtdPortas);
+            setQtdRodas(qtdRodas);
+        }
+
         private String cor;
         private String modelo;
         private Double velocidadeMaxima;
         private int qtdRodas;
         private int qtdPortas;
 
-        public void setCor(string cor)
+        private void setCor(string cor)
         {
             this.cor = cor;
         }
@@ -20,7 +29,7 @@ namespace ProjetoModuloSete
             return this.cor;
         }
 
-        public void setModelo(string modelo)
+        private void setModelo(string modelo)
         {
             this.modelo = modelo;
         }
@@ -30,7 +39,7 @@ namespace ProjetoModuloSete
             return this.modelo;
         }
 
-        public void setVelocidadeMaxima(double velocidadeMaxima)
+        private void setVelocidadeMaxima(double velocidadeMaxima)
         {
             this.velocidadeMaxima = velocidadeMaxima;
         }
@@ -40,7 +49,7 @@ namespace ProjetoModuloSete
             return this.velocidadeMaxima;
         }
 
-        public void setQtdRodas(int qtdRodas)
+        private void setQtdRodas(int qtdRodas)
         {
             this.qtdRodas = qtdRodas;
         }
@@ -50,7 +59,7 @@ namespace ProjetoModuloSete
             return this.qtdRodas;
         }
 
-         public void setQtdPortas(int qtdPortas)
+        private void setQtdPortas(int qtdPortas)
         {
             this.qtdPortas = qtdPortas;
         }
