@@ -4,13 +4,13 @@ namespace ProjetoModuloSete
 {
     public class Carro
     {
-        public Carro(String cor, String modelo, Double velocidadeMaxima, int qtdRodas, int qtdPortas)
+        public Carro()
         {
-            setCor(cor);
+            /*Cor = cor;
             setModelo(modelo);
             setVelocidadeMaxima(velocidadeMaxima);
             setQtdPortas(qtdPortas);
-            setQtdRodas(qtdRodas);
+            setQtdRodas(qtdRodas);*/
         }
 
         private String cor;
@@ -19,54 +19,34 @@ namespace ProjetoModuloSete
         private int qtdRodas;
         private int qtdPortas;
 
-        private void setCor(string cor)
+        public string Cor
         {
-            this.cor = cor;
+            get{ return this.cor; }
+            set { this.cor = value; }
         }
 
-        public string getCor()
+        public string Modelo
         {
-            return this.cor;
+            get{ return this.modelo; }
+            set { this.modelo = value; }
         }
 
-        private void setModelo(string modelo)
+        public double VelocidadeMaxima
         {
-            this.modelo = modelo;
+            get { return this.velocidadeMaxima; }
+            set { this.velocidadeMaxima = value; }
         }
 
-        public string getModelo()
+        public int QtdRodas
         {
-            return this.modelo;
+            get { return this.qtdRodas; }
+            set { this.qtdRodas = value; }
         }
 
-        private void setVelocidadeMaxima(double velocidadeMaxima)
+        public int QtdPortas
         {
-            this.velocidadeMaxima = velocidadeMaxima;
-        }
-
-        public double getVelocidadeMaxima()
-        {
-            return this.velocidadeMaxima;
-        }
-
-        private void setQtdRodas(int qtdRodas)
-        {
-            this.qtdRodas = qtdRodas;
-        }
-
-        public int getQtdRodas()
-        {
-            return this.qtdRodas;
-        }
-
-        private void setQtdPortas(int qtdPortas)
-        {
-            this.qtdPortas = qtdPortas;
-        }
-
-        public int getQtdPortas()
-        {
-            return this.qtdPortas;
+            get { return this.qtdPortas; }
+            set { this.qtdPortas = value; }
         }
 
         public string Ligar()

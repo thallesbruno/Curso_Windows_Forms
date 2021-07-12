@@ -21,7 +21,12 @@ namespace ProjetoModuloSete
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
-            meuCarro = new Carro("Prata", "Honda City", 220, 4, 4);
+            meuCarro = new Carro();
+            meuCarro.Cor = "Prata";
+            meuCarro.Modelo = "Honda City";
+            meuCarro.VelocidadeMaxima = 220;
+            meuCarro.QtdPortas = 4;
+            meuCarro.QtdRodas = 4;
         }
 
         private void btnLigar_Click(object sender, EventArgs e)
