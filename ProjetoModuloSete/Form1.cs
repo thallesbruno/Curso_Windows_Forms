@@ -31,7 +31,8 @@ namespace ProjetoModuloSete
 
         private void btnLigar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(meuCarro.Ligar());
+            //MessageBox.Show(meuCarro.Ligar(10));
+            MessageBox.Show(meuCarro.Ligar(10.50));
         }
 
         private void btnAcelerar_Click(object sender, EventArgs e)
