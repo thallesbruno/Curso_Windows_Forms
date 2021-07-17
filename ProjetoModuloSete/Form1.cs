@@ -27,6 +27,10 @@ namespace ProjetoModuloSete
             meuCarro.velocidadeMaxima = 220;
             meuCarro.qtdPortas = 4;
             meuCarro.qtdRodas = 4;
+
+            Motocicleta minhaMoto = new Motocicleta();
+            minhaMoto.cor = "Preta";
+            MessageBox.Show(minhaMoto.Ligar());
         }
 
         private void btnLigar_Click(object sender, EventArgs e)
