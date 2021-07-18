@@ -6,30 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSete
 {
-    public class Veiculo
+    public interface Veiculo
     {
-        public String cor { get; set; }
-        public String modelo { get; set; }
-        public Double velocidadeMaxima { get; set; }
-        public int qtdRodas { get; set; }
-        public int qtdPortas { get; set; }
+        String cor { get; set; }
+        String modelo { get; set; }
+        Double velocidadeMaxima { get; set; }
+        int qtdRodas { get; set; }
+        int qtdPortas { get; set; }
 
-        public string Ligar()
-        {
-            return "Veículo ligado!";
-        }
-        public string Ligar(int velocidade)
-        {
-            return "Veículo ligado! Velocidade inicial: " + velocidade;
-        }
-        public string Ligar(double velocidade)
-        {
-            return "Veículo ligado! Velocidade inicial: " + velocidade;
-        }
-
-        public string Acelerar()
-        {
-            return "Veículo acelerou!";
-        }
+        string Ligar();
+        string Ligar(int velocidade);
+        string Ligar(double velocidade);
+        string Acelerar();
     }
 }

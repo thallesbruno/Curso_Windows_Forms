@@ -32,9 +32,9 @@ namespace ProjetoModuloSete
             //MessageBox.Show(minhaMoto.Ligar());
             MessageBox.Show(ConverterParaString(minhaMoto));
 
-            Veiculo meuVeiculo = new Veiculo();
+            /*Veiculo meuVeiculo = new Veiculo();
             meuVeiculo.cor = "Azul";
-            MessageBox.Show(ConverterParaString(meuVeiculo));
+            MessageBox.Show(ConverterParaString(meuVeiculo));*/
         }
 
         public string ConverterParaString(Veiculo veiculo)
