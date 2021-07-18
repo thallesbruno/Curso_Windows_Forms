@@ -37,9 +37,9 @@ namespace ProjetoModuloSete
             MessageBox.Show(ConverterParaString(meuVeiculo));*/
         }
 
-        public string ConverterParaString(Veiculo veiculo)
+        public string ConverterParaString(IVeiculo veiculo)
         {
-            if (typeof(Veiculo) == veiculo.GetType())
+            if (typeof(IVeiculo) == veiculo.GetType())
             {
                 return "Veiculo Cor: " + veiculo.cor;
             }

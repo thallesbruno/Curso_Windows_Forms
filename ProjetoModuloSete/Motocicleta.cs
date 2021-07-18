@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSete
 {
-    public class Motocicleta : Veiculo
+    public class Motocicleta : IVeiculo
     {
         public String cor { get; set; }
         public String modelo { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSete
 {
-    public interface Veiculo
+    public interface IVeiculo
     {
         String cor { get; set; }
         String modelo { get; set; }

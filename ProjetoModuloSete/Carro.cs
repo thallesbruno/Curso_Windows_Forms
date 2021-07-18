@@ -2,7 +2,7 @@
 
 namespace ProjetoModuloSete
 {
-    public class Carro : Veiculo
+    public class Carro : IVeiculo
     {
         public String cor { get; set; }
         public String modelo { get; set; }
