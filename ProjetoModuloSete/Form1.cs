@@ -24,13 +24,33 @@ namespace ProjetoModuloSete
             meuCarro = new Carro();
             meuCarro.cor = "Prata";
             meuCarro.modelo = "Honda City";
-            meuCarro.velocidadeMaxima = 220;
-            meuCarro.qtdPortas = 4;
-            meuCarro.qtdRodas = 4;
+            MessageBox.Show(ConverterParaString(meuCarro));
+            //MessageBox.Show(meuCarro.cor);
 
             Motocicleta minhaMoto = new Motocicleta();
             minhaMoto.cor = "Preta";
-            MessageBox.Show(minhaMoto.Ligar());
+            //MessageBox.Show(minhaMoto.Ligar());
+            MessageBox.Show(ConverterParaString(minhaMoto));
+
+            Veiculo meuVeiculo = new Veiculo();
+            meuVeiculo.cor = "Azul";
+            MessageBox.Show(ConverterParaString(meuVeiculo));
+        }
+
+        public string ConverterParaString(Veiculo veiculo)
+        {
+            if (typeof(Veiculo) == veiculo.GetType())
+            {
+                return "Veiculo Cor: " + veiculo.cor;
+            }
+            else if (typeof(Carro) == veiculo.GetType())
+            {
+                return "Carro Cor: " + veiculo.cor;
+            }
+            else if (typeof(Motocicleta) == veiculo.GetType())
+            {
+                return "Motocicleta Cor: " + veiculo.cor;
+            }return String.Empty;
         }
 
         private void btnLigar_Click(object sender, EventArgs e)
