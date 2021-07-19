@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSeteExemplo
 {
-    public class Livro
+    public class Livro : Entidade
     {
-        public int Codigo { get; set; }
-        public string Titulo { get; set; }
+        public Livro()
+        {
+            this.ListaAutores = new List<Autor>;
+            this.Editora = new Editora();
+        }
         public double PrecoCompra { get; set; }
         public double PrecoVenda { get; set; }
+        public List<Autor> ListaAutores { get; set; }
+        public Editora Editora { get; set; }
     }
 }

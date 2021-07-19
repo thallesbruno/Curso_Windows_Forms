@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSeteExemplo
 {
-    public class Endereco
+    public class Editora : Pessoa 
     {
-        public int Numero { get; set; }
-        public string Rua { get; set; }
     }
 }

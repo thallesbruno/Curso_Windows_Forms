@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSeteExemplo.Endereco
 {
-    public class Cidade : Entidade
+    public class Estado : Entidade
     {
-        public Cidade()
+        public Estado()
         {
-            this.Estado = new Estado();
+            this.Pais = new Pais();
         }
-        public Estado Estado { get; set; }
+        public Pais Pais { get; set; }
+        public string UF { get; set; }
     }
 }
+ 
