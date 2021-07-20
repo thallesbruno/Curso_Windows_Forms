@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace ProjetoModuloSeteExemplo.Transacao
 {
-    class EntradaLivro
+    class SaidaLivro
     {
-       public EntradaLivro()
+        public SaidaLivro()
         {
             this.ListaLivros = new List<Livro>();
-            this.Fornecedor = new Fornecedor();
+            this.Cliente = new Cliente();
         }
         public int Codigo { get; set; }
         public long NumeroNota { get; set; }
         public List<Livro> ListaLivros { get; set; }
-        public Fornecedor Fornecedor { get; set; }
+        public Cliente Cliente { get; set; }
 
-        public double CalcularPrecoTotalEntrada()
+        public double CalcularPrecoTotalSaida()
         {
-            double precoCompraTotal = 0;
-            foreach  (Livro livro in this.ListaLivros)
+            double precoVendaTotal = 0;
+            foreach (Livro livro in this.ListaLivros)
             {
-                precoCompraTotal += livro.PrecoCompra;
+                precoVendaTotal += livro.PrecoCompra;
             }
-            return precoCompraTotal;
+            return precoVendaTotal;
         }
     }
 }
