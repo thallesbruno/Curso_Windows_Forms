@@ -23,6 +23,10 @@ namespace ProjetoModuloSeteExemplo
             EntradaLivro entrada = new EntradaLivro();
             entrada.Codigo = 1;
             entrada.NumeroNota = 1234;
+            Livro meuLivro = new Livro();
+            meuLivro.Codigo = 10;
+            meuLivro.Editora.Codigo = 11;
+            entrada.ListaLivros.Add(meuLivro);
             entrada.Fornecedor.Codigo = 12;
             entrada.Fornecedor.TipoPessoa = EnumTipoPessoa.Fornecedor;
             entrada.Fornecedor.EnderecoCompleto.Numero = 524;

@@ -10,7 +10,7 @@ namespace ProjetoModuloSeteExemplo
     {
         public Livro()
         {
-            this.ListaAutores = new List<Autor>;
+            this.ListaAutores = new List<Autor>();
             this.Editora = new Editora();
         }
         public double PrecoCompra { get; set; }
