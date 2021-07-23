@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace ProjetoModuloOito
 {
@@ -15,6 +10,27 @@ namespace ProjetoModuloOito
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+            MySqlConnection conexao = new MySqlConnection(conn);
+
+            try
+            {
+                conexao.Open();
+                MessageBox.Show("Conexão criada com sucesso!");
+            }
+            catch (MySqlException mysqle)
+            {
+
+                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }
