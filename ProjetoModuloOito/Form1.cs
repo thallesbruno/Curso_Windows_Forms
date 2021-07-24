@@ -29,30 +29,7 @@ namespace ProjetoModuloOito
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexao = ConexaoBD.getInstancia().getConexao();
-
-            try
-            {
-                conexao.Open();
-
-                MySqlCommand comando = new MySqlCommand();
-                comando = conexao.CreateCommand();
-                comando.CommandText = "DELETE FROM USUARIOS WHERE ID = @varId";
-                comando.Parameters.AddWithValue("varId", Convert.ToInt32(txtId2.Text.Trim()));
-                int valorRetorno = comando.ExecuteNonQuery();
-                if (valorRetorno < 1)
-                    MessageBox.Show("Erro ao excluir!");
-                else
-                    MessageBox.Show("Registro excluído com sucesso!");
-            }
-            catch (MySqlException mysqle)
-            {
-                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
-            }
-            finally
-            {
-                conexao.Close();
-            }
+            new UsuarioBD().ExcluirRegistro(Convert.ToInt32(txtId2.Text.Trim()));
         }
     }
 }
