@@ -14,51 +14,13 @@ namespace ProjetoModuloOito
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
-            MySqlConnection conexao = new MySqlConnection(conn);
-
-            try
-            {
-                conexao.Open();
-
-                MySqlCommand comando = new MySqlCommand();
-                comando = conexao.CreateCommand();
-                if (txtIdBusca.Text.Trim().Equals(String.Empty))
-                {
-                    comando.CommandText = "SELECT NOME FROM USUARIOS";
-                }
-                else
-                {
-                    comando.CommandText = "SELECT NOME FROM USUARIOS WHERE ID = @varId";
-                    comando.Parameters.AddWithValue("varId", Convert.ToInt32(txtIdBusca.Text.Trim()));
-                }
-                
-
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    if (reader["NOME"] != null)
-                    {
-                        MessageBox.Show(reader["NOME"].ToString());
-                    }
-                }
-            }
-            catch (MySqlException mysqle)
-            {
-
-                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
-            }
-            finally
-            {
-                conexao.Close();
-            }
+            UsuarioBD user = new UsuarioBD();
+            MessageBox.Show(user.BuscarNome(Convert.ToInt32(txtIdBusca.Text.Trim())));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
-            MySqlConnection conexao = new MySqlConnection(conn);
+            MySqlConnection conexao = ConexaoBD.getInstancia().getConexao();
 
             try
             {
@@ -86,8 +48,7 @@ namespace ProjetoModuloOito
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
-            MySqlConnection conexao = new MySqlConnection(conn);
+            MySqlConnection conexao = ConexaoBD.getInstancia().getConexao();
 
             try
             {
@@ -116,8 +77,7 @@ namespace ProjetoModuloOito
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
-            MySqlConnection conexao = new MySqlConnection(conn);
+            MySqlConnection conexao = ConexaoBD.getInstancia().getConexao();
 
             try
             {
