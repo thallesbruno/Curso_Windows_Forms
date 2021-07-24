@@ -43,5 +43,32 @@ namespace ProjetoModuloOito
             }
             return string.Empty;
         }
+
+        public void InserirUsuario(string nome)
+        {
+            MySqlConnection conexao = ConexaoBD.getInstancia().getConexao();
+            try
+            {
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando = conexao.CreateCommand();
+                comando.CommandText = "INSERT INTO USUARIOS (NOME) VALUES (@varNome)";
+                comando.Parameters.AddWithValue("varNome", nome);
+                int valorRetorno = comando.ExecuteNonQuery();
+                if (valorRetorno < 1)
+                    MessageBox.Show("Erro ao inserir!");
+                else
+                    MessageBox.Show("Registro inserido com sucesso!");
+            }
+            catch (MySqlException mysqle)
+            {
+                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

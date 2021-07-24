@@ -14,36 +14,12 @@ namespace ProjetoModuloOito
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UsuarioBD user = new UsuarioBD();
-            MessageBox.Show(user.BuscarNome(Convert.ToInt32(txtIdBusca.Text.Trim())));
+            MessageBox.Show(new UsuarioBD().BuscarNome(Convert.ToInt32(txtIdBusca.Text.Trim())));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexao = ConexaoBD.getInstancia().getConexao();
-
-            try
-            {
-                conexao.Open();
-
-                MySqlCommand comando = new MySqlCommand();
-                comando = conexao.CreateCommand();
-                comando.CommandText = "INSERT INTO USUARIOS (NOME) VALUES (@varNome)";
-                comando.Parameters.AddWithValue("varNome", txtNome.Text.Trim());
-                int valorRetorno = comando.ExecuteNonQuery();
-                if (valorRetorno < 1)
-                    MessageBox.Show("Erro ao inserir!");
-                else
-                    MessageBox.Show("Registro inserido com sucesso!");
-            }
-            catch (MySqlException mysqle)
-            {
-                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
-            }
-            finally
-            {
-                conexao.Close();
-            }
+            new UsuarioBD().InserirUsuario(txtNome.Text.Trim());
         }
 
         private void button3_Click(object sender, EventArgs e)
