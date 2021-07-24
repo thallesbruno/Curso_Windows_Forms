@@ -23,7 +23,16 @@ namespace ProjetoModuloOito
 
                 MySqlCommand comando = new MySqlCommand();
                 comando = conexao.CreateCommand();
-                comando.CommandText = "SELECT NOME FROM USUARIOS";
+                if (txtIdBusca.Text.Trim().Equals(String.Empty))
+                {
+                    comando.CommandText = "SELECT NOME FROM USUARIOS";
+                }
+                else
+                {
+                    comando.CommandText = "SELECT NOME FROM USUARIOS WHERE ID = @varId";
+                    comando.Parameters.AddWithValue("varId", Convert.ToInt32(txtIdBusca.Text.Trim()));
+                }
+                
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -64,11 +73,68 @@ namespace ProjetoModuloOito
                     MessageBox.Show("Erro ao inserir!");
                 else
                     MessageBox.Show("Registro inserido com sucesso!");
-
             }
             catch (MySqlException mysqle)
             {
+                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+            MySqlConnection conexao = new MySqlConnection(conn);
+
+            try
+            {
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando = conexao.CreateCommand();
+                comando.CommandText = "UPDATE USUARIOS SET NOME = @varNome WHERE ID = @varId";
+                comando.Parameters.AddWithValue("varNome", txtNome2.Text.Trim());
+                comando.Parameters.AddWithValue("varId", Convert.ToInt32(txtId.Text.Trim()));
+                int valorRetorno = comando.ExecuteNonQuery();
+                if (valorRetorno < 1)
+                    MessageBox.Show("Erro ao editar!");
+                else
+                    MessageBox.Show("Registro editado com sucesso!");
+            }
+            catch (MySqlException mysqle)
+            {
+                MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+            MySqlConnection conexao = new MySqlConnection(conn);
+
+            try
+            {
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando = conexao.CreateCommand();
+                comando.CommandText = "DELETE FROM USUARIOS WHERE ID = @varId";
+                comando.Parameters.AddWithValue("varId", Convert.ToInt32(txtId2.Text.Trim()));
+                int valorRetorno = comando.ExecuteNonQuery();
+                if (valorRetorno < 1)
+                    MessageBox.Show("Erro ao excluir!");
+                else
+                    MessageBox.Show("Registro excluído com sucesso!");
+            }
+            catch (MySqlException mysqle)
+            {
                 MessageBox.Show("Erro de acesso ao MySQL: " + mysqle.Message, "Erro");
             }
             finally
